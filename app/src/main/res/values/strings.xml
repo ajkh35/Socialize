@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Socialize</string>
+    <string name="socialize">Socialize</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="feed">Feed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="dummy_date_time">Mar 21, 2018 12:00 pm</string>
+    <string name="content">This is some content. This is some content. This is some content. This is some content. This is some content. This is some content. This is some content. This is some content. This is some content.</string>
+</resources>
