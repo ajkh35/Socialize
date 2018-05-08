@@ -20,8 +20,8 @@ class PagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> HomeFeed.newInstance(position,Constants.HOME_FEED)
-            1 -> PeopleFragment.newInstance("","")
-            2 -> SettingsFragment.newInstance("","")
+            1 -> PeopleFragment.newInstance(position,Constants.PROFILE)
+            2 -> SettingsFragment.newInstance(position,Constants.SETTINGS)
             else -> PlaceholderFragment.newInstance("","")
         }
     }
