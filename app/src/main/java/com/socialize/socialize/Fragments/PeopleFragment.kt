@@ -56,7 +56,7 @@ class PeopleFragment : Fragment() {
         val list = ArrayList<Person>()
 
         for (i in 0..9){
-            list.add(Person("Person $i",""))
+            list.add(Person("Person $i","","","","",""))
         }
 
         return list

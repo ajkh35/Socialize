@@ -12,4 +12,15 @@
     <string name="dummy_date_time">Mar 21, 2018 12:00 pm</string>
     <string name="content">This is some content. This is some content. This is some content. This is some content. This is some content. This is some content. This is some content. This is some content. This is some content.</string>
     <string name="person">Person</string>
+    <string name="invalid_user">User Name or Password incorrect</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">E-Mail</string>
+    <string name="signup">Sign Up</string>
+    <string name="validate_fields">Please enter valid or required data</string>
+    <string name="swipe_to_signup"><![CDATA[<-- Swipe left to SignUp]]></string>
+    <string name="swipe_login"><![CDATA[Swipe right to login -->]]></string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="log_out">Log Out</string>
+    <string name="admin">Admin</string>
 </resources>

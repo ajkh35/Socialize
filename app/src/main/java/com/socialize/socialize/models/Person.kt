@@ -1,5 +1,10 @@
 package com.socialize.socialize.models
 
-class Person(name: String,pic: String) {
-
-}
+data class Person(
+        val firstName: String,
+        val lastName: String,
+        val pic: String,
+        val userName: String,
+        val email: String,
+        val  password: String
+)

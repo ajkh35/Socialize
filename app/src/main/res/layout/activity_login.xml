@@ -10,79 +10,35 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintRight_toLeftOf="parent"
-        android:layout_margin="@dimen/dp_5">
+        android:layout_height="match_parent">
 
         <TextView
-            android:layout_alignParentTop="true"
-            android:text="@string/socialize"
-            android:textSize="@dimen/sp_58"
-            app:fontFamily="cursive"
-            android:textColor="@android:color/white"
+            android:id="@+id/app_title"
             android:gravity="center"
+            android:text="@string/app_name"
+            android:fontFamily="cursive"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_58"
+            android:padding="@dimen/dp_25"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <LinearLayout
-            android:id="@+id/user_name"
-            android:layout_centerInParent="true"
-            android:orientation="horizontal"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/login_pager"
+            android:layout_below="@id/app_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-            <TextView
-                android:layout_weight="0.5"
-                android:text="@string/user_name"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/sp_18"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:layout_weight="0.5"
-                android:hint="@string/user_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" >
-                <requestFocus />
-            </EditText>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/password"
-            android:orientation="horizontal"
-            android:layout_below="@id/user_name"
+        <TextView
+            android:id="@+id/dynamic_swipe"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/sp_24"
+            android:padding="@dimen/dp_10"
+            android:text="@string/swipe_to_signup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="@string/password"
-                android:textSize="@dimen/sp_18"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:layout_weight="0.5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:layout_weight="0.5"
-                android:hint="@string/password"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/login"
-            android:layout_below="@id/password"
-            android:layout_centerHorizontal="true"
-            android:text="@string/login"
-            android:background="@android:color/white"
-            android:textColor="@color/colorAccent"
-            android:layout_marginTop="@dimen/dp_5"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

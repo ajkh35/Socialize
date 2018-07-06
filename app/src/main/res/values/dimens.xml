@@ -14,4 +14,9 @@
     <dimen name="dp_001">0.01dp</dimen>
     <dimen name="dp_3">3dp</dimen>
     <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_75">75dp</dimen>
+    <dimen name="dp_65">65dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
 </resources>
