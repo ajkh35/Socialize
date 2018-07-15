@@ -12,7 +12,11 @@ class Constants {
         const val LOGIN = "login"
         const val SIGNUP = "signup"
         const val APP_TAG = "socialize"
+        const val FRIENDS = "friends"
+        const val USERNAME = "username"
         const val DEBUG = true
+        const val ISADMIN = "isadmin"
+
         fun log_info(tag: String,message: String) {
             if(DEBUG){
                 Log.i(tag,message)

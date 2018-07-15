@@ -5,13 +5,61 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.SettingsFragment">
 
-    <TextView
-        android:id="@+id/log_out"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/log_out"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_28"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/preferences"
+            android:text="@string/preferences"
+            android:textSize="@dimen/sp_24"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_001"
+            android:background="@android:color/background_light"/>
+
+        <TextView
+            android:id="@+id/notifications"
+            android:text="@string/notifications"
+            android:textSize="@dimen/sp_24"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_001"
+            android:background="@android:color/background_light"/>
+
+        <TextView
+            android:id="@+id/about"
+            android:text="@string/about"
+            android:textSize="@dimen/sp_24"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_001"
+            android:background="@android:color/background_light"/>
+
+        <TextView
+            android:id="@+id/log_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            android:gravity="center"/>
+    </LinearLayout>
 
 </FrameLayout>

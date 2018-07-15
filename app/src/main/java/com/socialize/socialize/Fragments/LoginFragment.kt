@@ -135,6 +135,8 @@ class LoginFragment : Fragment() {
                 // set user as logged in
                 val editor = activity!!.getSharedPreferences(Constants.MY_PREFS,0).edit()
                 editor.putBoolean(Constants.LOGGED_IN,true)
+                editor.putString(Constants.USERNAME, mUserName.text.toString())
+                editor.putBoolean(Constants.ISADMIN, mAdminChecked.isChecked)
                 editor.apply()
 
                 // Go to Main Screen

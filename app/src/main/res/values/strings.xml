@@ -23,4 +23,10 @@
     <string name="something_went_wrong">Something went wrong</string>
     <string name="log_out">Log Out</string>
     <string name="admin">Admin</string>
+    <string name="notifications">Notifications</string>
+    <string name="preferences">Preferences</string>
+    <string name="about">About</string>
+    <string name="app_about">This is a demo social media application</string>
+    <string name="version">Version: 1.0</string>
+    <string name="admin_contacts">No contacts for admin</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.socialize.socialize.Fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -17,6 +18,7 @@ import com.socialize.socialize.R
 import com.socialize.socialize.Socialize
 import com.socialize.socialize.Utilities.Constants
 import com.socialize.socialize.models.Person
+import org.json.JSONArray
 import java.util.regex.Pattern
 
 private const val POSITION = "position"
@@ -43,9 +45,10 @@ class SignupFragment : Fragment() {
         }
     }
 
+    @SuppressLint("NewApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.activity_signup,container,false)
+        val view = inflater.inflate(R.layout.fragment_signup,container,false)
 
         // Inject views
         mFirstName = view.findViewById(R.id.edit_first_name)
@@ -146,10 +149,11 @@ class SignupFragment : Fragment() {
                 val person = Person(
                         mFirstName.text.toString(),
                         mLastName.text.toString(),
-                        "some",
+                        "none",
                         mUserName.text.toString(),
                         mEmail.text.toString(),
-                        mPassword.text.toString())
+                        mPassword.text.toString(),
+                        null)
                 val user = HashMap<String, Person>()
                 user.put(person.userName, person)
 
