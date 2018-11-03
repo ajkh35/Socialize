@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity() {
         val ref = mFirebaseDatabase.getReference("superuser")
         val userRef = ref.child("users")
         userRef.addValueEventListener(object : ValueEventListener{
-            override fun onCancelled(p0: DatabaseError?) {
+            override fun onCancelled(p0: DatabaseError) {
                 Constants.log_info(Constants.APP_TAG, p0.toString())
             }
 
-            override fun onDataChange(p0: DataSnapshot?) {
+            override fun onDataChange(p0: DataSnapshot) {
                 val value = p0!!.value.toString()
                 mUsersList = JSONObject(value)
 

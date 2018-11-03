@@ -57,11 +57,11 @@ class LoginFragment : Fragment() {
         val ref = mFirebaseDatabase.getReference("superuser")
         val userRef = ref.child("users")
         userRef.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError?) {
+            override fun onCancelled(p0: DatabaseError) {
                 Constants.log_info(Constants.APP_TAG, p0.toString())
             }
 
-            override fun onDataChange(p0: DataSnapshot?) {
+            override fun onDataChange(p0: DataSnapshot) {
                 Constants.log_info(Constants.APP_TAG, "Got user data")
                 val value = p0?.value.toString()
                 mUsers = JSONObject(value)
@@ -114,15 +114,14 @@ class LoginFragment : Fragment() {
                 if(mAdmin == null){
                     val adminRef = ref.child("admin")
                     adminRef.addValueEventListener(object : ValueEventListener{
-                        override fun onCancelled(p0: DatabaseError?) {
+                        override fun onCancelled(p0: DatabaseError) {
                             Constants.log_info(Constants.APP_TAG, p0.toString())
                         }
 
-                        override fun onDataChange(p0: DataSnapshot?) {
+                        override fun onDataChange(p0: DataSnapshot) {
                             Constants.log_info(Constants.APP_TAG, "Got Admin data")
                             mAdmin = JSONObject(p0?.value.toString())
                         }
-
                     })
                 }
             }
