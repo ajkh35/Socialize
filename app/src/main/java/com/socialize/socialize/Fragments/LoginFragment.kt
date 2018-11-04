@@ -63,7 +63,7 @@ class LoginFragment : Fragment() {
 
             override fun onDataChange(p0: DataSnapshot) {
                 Constants.log_info(Constants.APP_TAG, "Got user data")
-                val value = p0?.value.toString()
+                val value = p0!!.value.toString()
                 mUsers = JSONObject(value)
             }
         })
