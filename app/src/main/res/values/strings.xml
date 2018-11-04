@@ -29,4 +29,5 @@
     <string name="app_about">This is a demo social media application</string>
     <string name="version">Version: 1.0</string>
     <string name="admin_contacts">No contacts for admin</string>
+    <string name="no_friends">No friends yet</string>
 </resources>

@@ -46,10 +46,10 @@ class PeopleFragment : Fragment() {
         mGrid = view.findViewById(R.id.grid)
         mGrid.layoutManager = GridLayoutManager(activity, GRID_SIZE)
 
-//        if(mList!!.getJSONObject(MainActivity.mUserName).has("friends")){
-//            createPersonList()
-//        }
-        mGrid.adapter = PeopleAdapter(activity,getPersonList())
+        if(mList!!.getJSONObject(MainActivity.mUserName).has("friends")){
+            createPersonList()
+        }
+        mGrid.adapter = PeopleAdapter(activity,mPersonList)
 
         return view
     }
@@ -57,14 +57,13 @@ class PeopleFragment : Fragment() {
     /**
      * Map the retrieved user to person
      */
-    private fun userToPersonMapper(person: Person, user: JSONObject) {
+    private fun userToPersonMapper(user: JSONObject): Person {
+        val person = Person()
         person.firstName = user.getString("firstName")
         person.lastName = user.getString("lastName")
         person.userName = user.getString("userName")
-        person.email = user.getString("email")
-        person.password = user.getString("password")
-        person.friends = user.getJSONArray("friends")
         person.pic = user.getString("pic")
+        return person
     }
 
     companion object {
@@ -93,25 +92,12 @@ class PeopleFragment : Fragment() {
                 while(i < friends.length()){
                     if(mList!!.has(friends.get(i).toString())){
                         val user = mList!!.getJSONObject(friends.get(i).toString())
-                        val person = Person()
-                        userToPersonMapper(person, user)
+                        val person = userToPersonMapper(user)
                         mPersonList!!.add(person)
                     }
                     i++
                 }
             }
         }
-    }
-
-    private fun getPersonList() : ArrayList<Person>? {
-
-        var i=0
-        while(i < 10){
-            val person = Person("Person $i","","","","","",null)
-            mPersonList!!.add(person)
-            i++
-        }
-
-        return mPersonList
     }
 }

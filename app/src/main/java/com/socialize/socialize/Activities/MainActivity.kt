@@ -7,6 +7,7 @@ import android.support.design.widget.TabLayout
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.widget.Toolbar
+import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         mPager = findViewById(R.id.pager)
         mTabs = findViewById(R.id.tabs)
 
-        // Get firebase database
+        // Get data from firebase database
         mFirebaseDatabase = (application as Socialize).getDBInstance()
         val ref = mFirebaseDatabase.getReference("superuser")
         val userRef = ref.child("users")
@@ -64,7 +65,24 @@ class MainActivity : AppCompatActivity() {
                 mTabs.getTabAt(1)!!.setIcon(R.drawable.ic_account_box_black_36dp)
                 mTabs.getTabAt(2)!!.setIcon(R.drawable.ic_settings_black_36dp)
             }
+        })
 
+        // ViewPager page change listener
+        mPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener{
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+
+            }
+
+            override fun onPageSelected(position: Int) {
+                if(position == 1 && !mUsersList!!.getJSONObject(mUserName).has("friends")){
+                    Toast.makeText(this@MainActivity,resources.getString(R.string.no_friends),
+                            Toast.LENGTH_SHORT).show()
+                }
+            }
         })
     }
 
